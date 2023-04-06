@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Montserrat Font */
+
+:root {
+
+    --dark-gray: #e6ecf0;
+    --gray: #2e4756;
+    --turquoise: #3cc4bf;
+    --yellow: #f2b147;
+    --light-gray: #d3d3d3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--dark-gray);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid { /* Tamanho exibido em celulares */
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    /* 3 colunas de 80px */
+    grid-template-rows: 50px repeat(3, 80px) 60px;
+    /* 1ª coluna 50px, 3 colunas de 80px, Ultima coluna 60px */
+    gap: 5px;
+
+}
+
+@media (min-width: 768px) { /* Tamanho exibido em Desktops */
+    .grid {
+        width: 490px;
+        grid-template-columns: repeat(3, 150px);
+        grid-template-rows: 50px repeat(3, 150px) 60px;
+        gap: 20px;
+    }
+}
+
+.turn {
+    background-color: red;
+    border-radius: .2em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.actions {
+    background-color: greenyellow;
+}
+
+.square {
+    background-color: green;
+}
+
+.score {
+    background-color: blue;
+}
