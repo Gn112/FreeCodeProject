@@ -5,7 +5,7 @@
 
     --dark-gray: #e6ecf0;
     --gray: #2e4756;
-    --turquoise: #3cc4bf;
+    --turquoise: #923cc4;
     --yellow: #f2b147;
     --light-gray: #d3d3d3;
 }
@@ -28,6 +28,36 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Classes compartilhadas */
+
+button:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.turquoise {
+    color: var(--turquoise);
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(139, 137, 137, 0.322) 0px -3px 0px inset;
+}
+
+.border {
+    border: 1px solid rgba(211, 211, 211, 0.4) !important;
+}
+
+/*  */
 
 .grid {
     /* Tamanho exibido em celulares */
@@ -53,7 +83,7 @@ body {
 
 .turn {
     background-color: transparent;
-    color: var(--yellow);
+    color: var(--turquoise);
 
     border-radius: .2em;
     grid-column-start: 1;
@@ -87,10 +117,12 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid transparent;
-    color: white;
-    background-color: var(--gray);
-    border-radius: 10px;
+    color: rgb(116, 0, 116);
+
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, rgb(0, 139, 139), darkorchid) border-box;
+    border-radius: 0.4em;
+    border: 2px solid transparent;
 }
 
 .itens {
@@ -116,7 +148,10 @@ body {
 }
 
 .square {
-    background-color: green;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to right, rgb(0, 139, 139), darkorchid) border-box;
+    border-radius: 0.4em;
+    border: 2px solid transparent;
 }
 
 .score {
