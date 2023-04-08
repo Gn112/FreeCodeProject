@@ -150,10 +150,72 @@ button:hover {
 .square {
     background: linear-gradient(white, white) padding-box,
         linear-gradient(to right, rgb(0, 139, 139), darkorchid) border-box;
-    border-radius: 0.4em;
+    border-radius: 10px;
     border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.square:hover {
+    cursor: pointer;
+    background: linear-gradient(to top, rgb(186, 198, 207), rgba(204, 50, 204, 0.178)) padding-box,
+        linear-gradient(to right, rgb(186, 198, 207), rgb(204, 50, 204)) border-box;
 }
 
 .score {
-    background-color: blue;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to top, rgb(0, 139, 139), #9932cc) border-box;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
+.score p {
+    color: var(--turquoise);
+    font-weight: 700;
+}
+
+.score span {
+    margin: 3px;
+    font-weight: 500;
+}
+
+/* Modal styles - opens when game finishes  */
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modal-contents {
+    /* transform: translateY(-80px); */
+    height: 150px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #2a4544;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    margin: 10px;
+  }
+  
+  .modal-contents button {
+    padding: 10px;
+    background-color: var(--turquoise);
+    color: #2a4544;
+    border-radius: 3px;
+  }
